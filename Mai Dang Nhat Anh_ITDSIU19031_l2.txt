@@ -1,0 +1,49 @@
+Ex1: 
+#data
+CountryX = [400.2, 643.3, 1175.9, 3062.5, 6079.6, 11289.7, 16058.3]
+CountryY = [336.0, 472.0, 1028.0, 2092.0, 5131.0, 7689.0, 14147.0]
+CountryZ = [1307.0, 1158.0, 1191.0, 3140.0, 9023.0, 15502.0, 22218.0]
+years = list(range(1960,2021,10))
+
+#make plot GDP of country
+plt.plot(years, CountryX, color="green", marker = 'D', linestyle = 'solid', label = "CountryX")
+plt.plot(years, CountryY, color="blue", marker = 'D', linestyle = 'solid', label = "CountryY")
+plt.plot(years, CountryZ, color="red", marker = 'D', linestyle = 'solid', label = "CountryZ")
+
+#add title
+plt.title("GDP of country")
+
+#add x label and y label
+plt.xlabel("Year")
+plt.ylabel("Billions of $")
+
+plt.show()
+
+Ex2: 
+#data
+CountryX = [400.2, 643.3, 1175.9, 3062.5, 6079.6, 11289.7, 16058.3]
+CountryY = [336.0, 472.0, 1028.0, 2092.0, 5131.0, 7689.0, 14147.0]
+CountryZ = [1307.0, 1158.0, 1191.0, 3140.0, 9023.0, 15502.0, 22218.0]
+years = list(range(1960,2021,10))
+width = 0.2
+x = np.arange(7)
+#make bar chart 
+plt.bar(x ,CountryX, width, color = '#69DADB', label = 'Country X')
+plt.bar(x + width ,CountryY, width, color = '#FF9292',  label = 'Country Y')
+plt.bar(x + width*2 ,CountryZ, width, color = '#1597E5', label = 'Country Z')
+
+#add title
+plt.title("GDP of country")
+plt.xlabel("Years")
+plt.ylabel("Billions of $")
+plt.xticks(x+width, years)
+
+plt.show()
+
+Ex3:
+#data
+countries = ['X','Y','Z','W']
+export_rate = [50, 24, 18, 8]
+mycolors = ["#FF9292", "#D1E8E4", "#B2F9FC", "#39A388"]
+plt.pie(export_rate, labels = countries, colors = mycolors, autopct='%1.1f%%')
+plt.show()
